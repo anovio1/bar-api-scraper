@@ -2,6 +2,8 @@
 
 Script that displays aggregate data from csv's. CSV's are from PostgreSQL derived.replays and derived.match_players.
 
+![example-table](docs/images/example_avg.jpg)
+
 ## Quickstart
 
 `python main.py`

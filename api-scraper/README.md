@@ -1,5 +1,7 @@
 # Scraper
 
+![running-script](docs/example.gif)
+
 ## Quickstart
 
 `python main.py`
