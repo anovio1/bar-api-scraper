@@ -25,3 +25,8 @@ data/**/*
 !data/.gitkeep
 
 .vscode/
+copy_py.py
+src-copy/**/*
+
+data_cache/**/*
+*.parquet

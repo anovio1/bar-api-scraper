@@ -1,24 +1,19 @@
-# my_project/src/config.py
-
 import os
 from datetime import datetime
 import pytz
 
-# --- Configuration ---
-# Get the project root directory
-# This assumes config.py is in my_project/src/
+# --- Project Structure ---
+# Assumes config.py is in my_project/src/
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-
-# Data and cache directories relative to project root
 DATA_DIR = os.path.join(PROJECT_ROOT, "data")
 CACHE_DIR = os.path.join(PROJECT_ROOT, "data_cache")
 
+# --- Source Files ---
 PLAYERS_CSV_FILE = "match_players_unlogged_202507071306.csv"
 REPLAYS_CSV_FILE = "replays_202507071307.csv"
-
 CACHED_MERGED_DF_FILE = os.path.join(CACHE_DIR, "merged_data_cache.parquet")
 
-# Columns for analysis
+# --- Core Column Names ---
 DATE_ANALYSIS_COLUMN = "start_time"
 MAP_NAME_COLUMN = "map_name"
 REPLAY_ID_COLUMN = "replay_id"
@@ -27,7 +22,8 @@ PLAYER_NAME_COLUMN = "name"
 SKILL_COLUMN = "skill"
 AVG_LOBBY_SKILL_COLUMN = "avg_lobby_skill"
 
-# Map series patterns for filtering and counting games
+# --- Analysis Parameters ---
+# Map series patterns for filtering
 MAP_GLITTERS_PATTERN = "All That Glitters"
 MAP_SMOLDERS_PATTERN = "All That Smolders"
 MAP_SIMMERS_PATTERN = "All That Simmers"
@@ -50,3 +46,6 @@ DEFAULT_FILTER_MAPS = [
 
 # Default threshold for "last played" analysis
 LAST_PLAYED_DATE_THRESHOLD = datetime(2025, 1, 1, 0, 0, 0, tzinfo=pytz.utc)
+
+# Default OS thresholds for wins_above_os_leaderboard
+DEFAULT_OS_THRESHOLDS = [40, 35, 30, 25]
